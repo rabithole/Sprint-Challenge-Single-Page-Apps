@@ -37,3 +37,16 @@ main {
 header h1 {
   text-align: center;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 2.5em;
+}
+
+nav a {
+  margin-right: 20px;
+  font-size: 1.4em;
+  color: black;
+}
