@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
@@ -10,21 +10,44 @@ import { NavLink } from "react-router-dom";
 // https://react.semantic-ui.com/elements/button/
 // https://react.semantic-ui.com/collections/breadcrumb/
 
-export default function TabNav() {
+export default class TabNav extends Component {
+	state = {}
+
+	handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+
+	render() {
+		const { activeItem } = this.state 
+
 		return (
-			<nav>
-		      	<NavLink to='/'>
-		      		<p>Home Page</p>
-		      	</NavLink>
-		     	<NavLink to='/'>
-		      		<p>Characters</p>
-		      	</NavLink>
-		      	<NavLink to='/'>
-		      		<p>Locations</p>
-		      	</NavLink>
-		      	<NavLink to='/'>
-		      		<p>Episodes</p>
-		      	</NavLink>
-      		</nav>
+			<Menu>
+				<Menu.Item
+					name='Home Page'
+					active={activeItem === 'Home Page'}
+					onClick={this.handleItemClick}
+				>Home Page
+				</Menu.Item>
+				<Menu.Item
+					name='Characters'
+					active={activeItem === 'Characters'}
+					onClick={this.handleItemClick}
+				>Characters
+				</Menu.Item>
+				<Menu.Item
+					name='Locations'
+					active={activeItem === 'Locations'}
+					onClick={this.handleItemClick}
+				>Locations
+				</Menu.Item>
+				<Menu.Item
+					name='Episodes'
+					active={activeItem === 'Episodes'}
+					onClick={this.handleItemClick}
+				>Episodes
+				</Menu.Item>
+			</Menu>
 		)
+	}
 };
+
+// Home Page, Characters, Locations, Episodes for links
+	
