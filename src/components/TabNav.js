@@ -35,14 +35,14 @@ export default class TabNav extends Component {
 				>Characters
 				</Menu.Item>
 
-				<Menu.Item
+				<Menu.Item as={Link} to='/LocationsList'
 					name='Locations'
 					active={activeItem === 'Locations'}
 					onClick={this.handleItemClick}
 				>Locations
 				</Menu.Item>
 
-				<Menu.Item
+				<Menu.Item as={Link} to='/Episodes'
 					name='Episodes'
 					active={activeItem === 'Episodes'}
 					onClick={this.handleItemClick}

@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList';
 import WelcomePage from './components/WelcomePage';
+import LocationsList from './components/LocationsList';
 import { Route } from 'react-router-dom';
 
 export default function App() {
@@ -10,7 +11,8 @@ export default function App() {
     <main>
       <Header />
       <Route exact path='/' component={WelcomePage} />
-      <Route exact path='/CharacterList' component={CharacterList} />
+      <Route path='/CharacterList' component={CharacterList} />
+      <Route path='/LocationsList' component={LocationsList} />
     </main>
   );
 }

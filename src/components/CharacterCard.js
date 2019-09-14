@@ -4,7 +4,7 @@ import React from "react";
 export default function CharacterCard(props) {
 
   	return (
-  		<div key={props.id}>
+  		<div key={props.id} className='charCard'>
   			<p>Name: {props.name}</p>
   			<p>Species: {props.species} Status: {props.status}</p>
   			<img src={props.image} alt={props.name} />
