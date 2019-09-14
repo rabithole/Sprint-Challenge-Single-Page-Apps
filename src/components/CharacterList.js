@@ -13,7 +13,7 @@ export default function CharacterList() {
         .get('https://rickandmortyapi.com/api/character/')
         .then(res => {
           const char = res.data;
-          console.log('Response data from R&M API:', char);
+          console.log('Response data from R&M API:', char.results);
           setChar(char.results);
       })
         .catch(error => {
@@ -31,6 +31,8 @@ export default function CharacterList() {
             image={char.image}
             location={char.location}
             origin={char.origin}
+            species={char.species}
+            status={char.status}
           />
         )
       })};

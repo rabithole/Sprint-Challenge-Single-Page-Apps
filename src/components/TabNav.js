@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Tab, Menu, Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // TODO: Add missing menu/tabs/nav below
 
@@ -20,24 +20,28 @@ export default class TabNav extends Component {
 
 		return (
 			<Menu>
-				<Menu.Item
+				
+				<Menu.Item as={Link} to='/'
 					name='Home Page'
 					active={activeItem === 'Home Page'}
 					onClick={this.handleItemClick}
 				>Home Page
 				</Menu.Item>
-				<Menu.Item
+				
+				<Menu.Item as={Link} to='/CharacterList'
 					name='Characters'
 					active={activeItem === 'Characters'}
 					onClick={this.handleItemClick}
 				>Characters
 				</Menu.Item>
+
 				<Menu.Item
 					name='Locations'
 					active={activeItem === 'Locations'}
 					onClick={this.handleItemClick}
 				>Locations
 				</Menu.Item>
+
 				<Menu.Item
 					name='Episodes'
 					active={activeItem === 'Episodes'}
