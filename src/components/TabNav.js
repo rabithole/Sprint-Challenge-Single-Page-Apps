@@ -42,7 +42,7 @@ export default class TabNav extends Component {
 				>Locations
 				</Menu.Item>
 
-				<Menu.Item as={Link} to='/Episodes'
+				<Menu.Item as={Link} to='/EpisodeList'
 					name='Episodes'
 					active={activeItem === 'Episodes'}
 					onClick={this.handleItemClick}

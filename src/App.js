@@ -4,6 +4,7 @@ import Header from "./components/Header.js";
 import CharacterList from './components/CharacterList';
 import WelcomePage from './components/WelcomePage';
 import LocationsList from './components/LocationsList';
+import EpisodeList from './components/EpisodeList';
 import { Route } from 'react-router-dom';
 
 export default function App() {
@@ -13,6 +14,8 @@ export default function App() {
       <Route exact path='/' component={WelcomePage} />
       <Route path='/CharacterList' component={CharacterList} />
       <Route path='/LocationsList' component={LocationsList} />
+      <Route path='/EpisodeList' component={EpisodeList} />
+      
     </main>
   );
 }
