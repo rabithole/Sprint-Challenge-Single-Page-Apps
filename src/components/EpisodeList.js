@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 
-export default function LocationsList() {
+export default function EpisodeList() {
 	const [char, setChar] = useState( [] );
   	useEffect(() => {
       axios
-        .get('https://rickandmortyapi.com/api/location/')
+        .get('https://rickandmortyapi.com/api/episode/')
         .then(res => {
           const char = res.data;
           console.log('Response data from R&M API:', char.results);
@@ -21,11 +21,11 @@ export default function LocationsList() {
     	<section className="character-list grid-view">
       		{char.map(char => {
 		        return (
-		          <LocationCard 
+		          <EpisodeCard 
 		            key={char.id}
-		            name={char.name}
-		           	type={char.type}
-		           	dimension={char.dimension}
+		            episode={char.episode}
+		           	name={char.name}
+		           	air_date={char.air_date}
 		          />
 		        )
       	})};
